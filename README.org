@@ -1,0 +1,22 @@
+* Information
+This script was designed to be used in tandem with the Prism launcher on Linux. I was getting tired to mods not being
+able to be dowloaded automatically when installing modpacks, so I automated a way to do it via a web scraper.
+
+Based off of [[https://gitlab.com/C0rn3j/MCModUpdater][MCModUpdater]] by C0rn3j
+
+* How to use
+- Create a new CurseForge modpack Prism instance
+- When the "Blocked mods found" popup appears copy and paste all of the text into ../modlist.txt in the refractor
+  directory
+- Run `python main.py` from the refractor directory to automate the download process
+- Confirm that all mods have downloaded
+  - The popup from earlier should confirm this for you in the bottom left corner
+- Select "OK" in the popup
+- Once the installation has finished and the instance has been created, return to the terminal and press any key to
+  clean up the downloads directory
+  - Downloads directory is ../Prism/mods by default
+    - This can be changed in ../main.py for now
+
+* Future Improvements
+** TODO Make things more easily configurable
+Things like specifying the downloads folder could be stored in a config.yaml file for example
